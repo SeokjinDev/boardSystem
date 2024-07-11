@@ -26,6 +26,7 @@ public class Post {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @Column(name = "title")
     private String title;
 
@@ -45,12 +46,18 @@ public class Post {
     @Column(name = "updated_at")
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-    
-    @Builder
+
+    public Post update(String title, String content) {
+        this.title = title;
+        this.content = content;
+        return this;
+    }
+
+    @Builder(toBuilder = true)
     public Post(String title, String content, String author, String password) {
         this.title = title;
         this.content = content;
-        this.author = content;
+        this.author = author;
         this.password = password;
     }
 }
