@@ -13,17 +13,18 @@
 |데이터베이스|MariaDB|
 
 ### API 명세서
-| Category | Func            | Method | URI              | Status |
-|----------|-----------------|--------|------------------|--------|
-| 게시글   | 게시글 작성      | POST   | /api/posts        |  |
-|          | 게시글 목록 조회 | GET    | /api/posts        |  |
-|          | 게시글 조회     | GET     | /api/posts?id=    |  |
-|          | 게시글 수정     | PUT     | /api/posts?id=    |  |
-|          | 게시글 삭제     | DELETE  | /api/posts?id=    |  |
-| 댓글     | 댓글 작성      | POST     | /api/comments     |  |
-|          | 댓글 조회      | GET     | /api/comments?id=  |  |
-|          | 댓글 수정      | PUT     | /api/comments?id=  |  |
-|          | 댓글 삭제      | DELETE  | /api/comments?id=  |  |
+
+| Category | Func            | Method | URI                |
+|----------|-----------------|--------|--------------------|
+| 게시글   | 게시글 전체 조회  | GET    | /api/posts         |
+|          | 게시글 작성      | POST   | /api/post          |
+|          | 게시글 조회      | GET    | /api/post/{id}     |
+|          | 게시글 수정      | PUT    | /api/post/{id}     |
+|          | 게시글 삭제      | DELETE | /api/post/{id}     |
+| 댓글     | 댓글 전체 조회    | GET    | /api/comments      |
+|          | 댓글 작성        | POST   | /api/comment/{id}  |
+|          | 댓글 수정        | PUT    | /api/comment/{id}  |
+|          | 댓글 삭제        | DELETE | /api/comment/{id}  |
 
 ### 데이터베이스
 ![alt text](img/databaseStructure.png)
