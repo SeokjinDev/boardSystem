@@ -14,17 +14,17 @@
 
 ### API 명세서
 
-| Category | Func            | Method | URI                |
-|----------|-----------------|--------|--------------------|
-| 게시글   | 게시글 전체 조회  | GET    | /api/posts         |
-|          | 게시글 작성      | POST   | /api/post          |
-|          | 게시글 조회      | GET    | /api/post/{id}     |
-|          | 게시글 수정      | PUT    | /api/post/{id}     |
-|          | 게시글 삭제      | DELETE | /api/post/{id}     |
-| 댓글     | 댓글 전체 조회    | GET    | /api/comments      |
-|          | 댓글 작성        | POST   | /api/comment/{id}  |
-|          | 댓글 수정        | PUT    | /api/comment/{id}  |
-|          | 댓글 삭제        | DELETE | /api/comment/{id}  |
+| Category | Func            | Method | URI                        |
+|----------|-----------------|--------|----------------------------|
+| 게시글   | 게시글 전체 조회  | GET    | /api/posts                 |
+|          | 게시글 작성      | POST   | /api/post                  |
+|          | 게시글 조회      | GET    | /api/post/{id}             |
+|          | 게시글 수정      | PUT    | /api/post/{id}             |
+|          | 게시글 삭제      | DELETE | /api/post/{id}             |
+| 댓글     | 댓글 전체 조회    | GET    | /api/{postId}/comments     |
+|          | 댓글 작성        | POST   | /api/{postId}/comment/{id} |
+|          | 댓글 수정        | PUT    | /api/{postId}/comment/{id} |
+|          | 댓글 삭제        | DELETE | /api/{postId}/comment/{id} |
 
 ### 데이터베이스
 ![alt text](img/databaseStructure.png)
